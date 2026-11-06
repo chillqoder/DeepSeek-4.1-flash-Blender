@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steampunk Dwarf — Three.js</title>
+    <meta name="description" content="Low-poly steampunk dwarf, built procedurally in Three.js" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="viewport"></canvas>
+
+      <aside class="panel" id="ui">
+        <header class="panel__header">
+          <div>
+            <h1>Steampunk Dwarf</h1>
+            <p>T-pose · low poly · 1.3 m</p>
+          </div>
+          <button class="panel__collapse" id="collapse" title="Свернуть панель" aria-label="Свернуть панель">−</button>
+        </header>
+
+        <div class="panel__body">
+          <div class="views" role="group" aria-label="Ракурсы камеры">
+            <button data-view="front" class="is-active"><span>1</span>Спереди</button>
+            <button data-view="back"><span>2</span>Сзади</button>
+            <button data-view="left"><span>3</span>Слева</button>
+            <button data-view="right"><span>4</span>Справа</button>
+            <button data-view="three-quarter">3/4</button>
+            <button data-view="reset">Сброс</button>
+          </div>
+
+          <button class="export" id="export">Скачать GLB</button>
+          <p class="hint">Тяните мышью — вращение · колесо — зум</p>
+          <p class="status" id="status"></p>
+        </div>
+      </aside>
+
+      <div class="loading" id="loading">
+        <span class="loading__mark"></span>
+        <span>Собираем гнома…</span>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
